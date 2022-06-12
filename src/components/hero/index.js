@@ -44,7 +44,41 @@ const Styles = css`
   section {
     height: 100vh;
   }
-  .container { 
+  .container {
+    .title {
+      .flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .border {
+        border: 1px solid black;
+        border-radius: 15px;
+        height: 70px;
+        width: 30%;
+        .frame {
+          height: 20px;
+          width: 100%;
+          border-bottom: 1px solid black;
+          align-items: center;
+          display: flex;
+          padding: 10px;
+          .circle {
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 30px;
+          }
+          .circle2 {
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 30px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
     height: 100vh;
     .scrolldown a svg {
        position: absolute;
@@ -83,6 +117,10 @@ const Styles = css`
     color: #000;
     z-index: 3;
     font-family: 'Questrial', sans-serif;
+    padding: 5px 30px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
   }
 
   .title {
@@ -153,6 +191,9 @@ const Styles = css`
     }
   }
   ${media.medium} {
+    .hero-sparkles {
+      padding: 10px;
+    }
     .hero-slide {
       padding-left: 0;
       padding-right: 0;
@@ -174,7 +215,13 @@ const Styles = css`
     }
 
     br {display:none;}
-
+    .border {
+      border: 1px solid black;
+      border-radius: 15px;
+      height: 60px;
+      align-items: end;
+      width: 60%!important;
+    }
     .title {
       width: 100%;
       overflow: hidden;
@@ -193,11 +240,10 @@ const Styles = css`
       font-size: 3.5rem;
       width: 100%;
       text-align: center;
-      margin-bottom:50px;
     }
     h2 {
       font-size: 2rem;
-      padding: 0 30px;
+      padding: 5px;
       line-height: 2.5rem;
     }
   }
@@ -212,9 +258,15 @@ const Hero = () => {
       <img src={heroImg} className="hero-sparkles" />
       <div className="container">
         <div className="title" >
-          <div>
+          <div className="flex" >
             <h1 dangerouslySetInnerHTML={i18n(locale, 'hero-1-title')} />
-            <h2 dangerouslySetInnerHTML={i18n(locale, 'hero-1-desc')} />
+            <div className="border" >
+              <div className="frame">
+                <div className="circle"></div>
+                <div className="circle2"></div>
+              </div>
+              <h2 dangerouslySetInnerHTML={i18n(locale, 'hero-1-desc')} />
+            </div>
           </div>
         </div>
         <p className="scrolldown">
