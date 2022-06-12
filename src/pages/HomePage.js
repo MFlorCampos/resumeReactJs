@@ -1,14 +1,11 @@
 import React from 'react';
-import { css } from '@emotion/react';
 
 import AppLayout from '../layouts/AppLayout';
 import ThemeProvider from '../contexts/ThemeContext';
 import Hero from '../components/hero';
-import Investors from '../components/programmingLanguages';
 import StyledSection from '../components/styled-section';
 import About from '../components/about';
-import Contact from '../components/contact';
-import ProgrammingLanguages from '../components/ProgrammingLanguages';
+import ProgrammingLanguages from '../components/programmingLanguages';
 import WorkExperience from '../components/work-experience';
 import Education from '../components/education';
 

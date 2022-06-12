@@ -11,7 +11,7 @@ import vueLogo from '../../../public/vue-js.png';
 import angularLogo from '../../../public/angular.png';
 import jestLogo from '../../../public/jest.png';
 import sparkle from '../../../public/sparkle-light.png';
-import sparkle2 from '../../../public/sparkle.png';
+import sparkleTwo from '../../../public/sparkle.png';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 
@@ -186,7 +186,7 @@ const ProgrammingLanguages = () => {
             </div>
           </div>
         </div>
-        <img src={sparkle2} className="icon-down" />
+        <img src={sparkleTwo} className="icon-down" />
       </div>
   </div>
   );
