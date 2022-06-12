@@ -145,13 +145,13 @@ const Styles = css`
   .hero-3 {
     position:relative;
     .container {
-      position: absolute; 
+      position: absolute;
       top: 0;
       left:0;
       right:0;
       width:100vw;
     }
-    
+
     h1 {
       margin-top:50px;
       margin-bottom:20px;
@@ -191,8 +191,12 @@ const Styles = css`
     }
   }
   ${media.medium} {
+    display: flex;
+    align-items: center;
     .hero-sparkles {
       padding: 10px;
+      object-fit: fill;
+      height: 60%;
     }
     .hero-slide {
       padding-left: 0;
@@ -252,7 +256,7 @@ const Styles = css`
 const Hero = () => {
   let { locale } = useParams();
   locale = locale || 'us';
-
+  console.log(media.medium);
   return (
     <div className="noise" css={[Styles]} >
       <img src={heroImg} className="hero-sparkles" />
