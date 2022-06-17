@@ -203,14 +203,14 @@ const Education = () => {
   locale = locale || 'us';
 
   return (
-    <div id="services" css={[Styles]}>
+    <div id="education" css={[Styles]}>
       <div className="container">
         <div>
-          <div className="highlight">
+          <div className="highlight" data-aos="fade-right">
             <img className="star-icon" src={sparkle} />
             <h2 dangerouslySetInnerHTML={i18n(locale, 'education')} />
           </div>
-          <div className="services-list">
+          <div className="services-list" data-aos="fade-right">
             { services.map((service, index) => <Service key={index} {...service} />) }
           </div>
         </div>

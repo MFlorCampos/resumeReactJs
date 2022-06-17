@@ -55,7 +55,7 @@ const Styles = css`
         border: 1px solid black;
         border-radius: 15px;
         height: 70px;
-        width: 30%;
+        width: 40%;
         .frame {
           height: 20px;
           width: 100%;
@@ -92,13 +92,14 @@ const Styles = css`
        font-size: 42px;
        line-height: 42px;
        border-radius: 100%;
+       z-index: 99;
 
        -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
        -o-transition: all .3s ease-in-out;
        transition: all .3s ease-in-out;
     }
-    .scrolldown a svg:hover { color: #0762f9; }
+    .scrolldown a svg:hover { color: #FFF; }
 
   }
 
@@ -256,27 +257,27 @@ const Styles = css`
 const Hero = () => {
   let { locale } = useParams();
   locale = locale || 'us';
-  console.log(media.medium);
+
   return (
     <div className="noise" css={[Styles]} >
       <img src={heroImg} className="hero-sparkles" />
       <div className="container">
         <div className="title" >
           <div className="flex" >
-            <h1 dangerouslySetInnerHTML={i18n(locale, 'hero-1-title')} />
+            <h1 dangerouslySetInnerHTML={i18n(locale, 'hero-1-title')} data-aos="fade-up" />
             <div className="border" >
               <div className="frame">
                 <div className="circle"></div>
                 <div className="circle2"></div>
               </div>
-              <h2 dangerouslySetInnerHTML={i18n(locale, 'hero-1-desc')} />
+              <h2 dangerouslySetInnerHTML={i18n(locale, 'hero-1-desc')} data-aos="fade-up"/>
             </div>
           </div>
         </div>
         <p className="scrolldown">
-          <Link to={`/${locale}/#about-us`} className="smoothscroll">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          <Link to={`/${locale}/#about`} className="smoothscroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+              <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
             </svg>
           </Link>
         </p>

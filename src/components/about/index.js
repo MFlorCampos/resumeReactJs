@@ -37,6 +37,9 @@ const Styles = css`
     a {
       font-size: 20px;
     }
+    .link:hover {
+      color: #fff;
+    }
   }
   .white-container {
     border: 1px solid #000;
@@ -162,7 +165,7 @@ const ContactText = ({text, link = {}}) => {
   return (
     <li>
         { Object.keys(link).length === 0 ? <p>{text}</p>
-        : <p><a target="blank" href={link} >{text}</a></p>}
+        : <p><a target="blank" href={link} className="link" >{text}</a></p>}
     </li>
   )
 };
@@ -173,23 +176,23 @@ const About = () => {
   locale = locale || 'us';
 
   return (
-    <div id="about-us" css={[Styles]}>
-      <div className="">
+    <div id="about" css={[Styles]}>
+      <div>
         <div className="container">
           <div className="white-container">
             <div className="flex">
               <div className="content-left">
-                <div className="highlight">
+                <div className="highlight" data-aos="fade-right">
                   <img className="star-icon" src={sparkle} />
                   <h2 dangerouslySetInnerHTML={i18n(locale, "about-me")} />
                 </div>
-                <p dangerouslySetInnerHTML={i18n(locale, "description")} />
+                <p dangerouslySetInnerHTML={i18n(locale, "description")} data-aos="fade-right" />
               </div>
               <div className="content-right">
                 <img alt="profile-img"  className="profile-img" src={profile} />
               </div>
             </div>
-            <ol className="flex list">
+            <ol className="flex list" data-aos="fade-up" >
               { contacts.map((contact, index) => <ContactText key={index} {...contact} />) }
             </ol>
           </div>

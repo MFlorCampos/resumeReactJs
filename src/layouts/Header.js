@@ -168,16 +168,16 @@ const Header = () => {
         <nav className="menu">
           <ul>
             <li>
-              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#about-us`} dangerouslySetInnerHTML={i18n(locale, 'about-me')} />
+              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#about`} dangerouslySetInnerHTML={i18n(locale, 'about-me')} />
             </li>
             <li>
-              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#services`} dangerouslySetInnerHTML={i18n(locale, 'services')} />
+              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#tools`} dangerouslySetInnerHTML={i18n(locale, 'tools-menu')} />
             </li>
             <li>
-              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#team`} dangerouslySetInnerHTML={i18n(locale, 'team')} />
+              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#work-exp`} dangerouslySetInnerHTML={i18n(locale, 'experience-menu')} />
             </li>
             <li>
-              <Link  onClick={() => setMenuOpened(false)} to={`/${locale}/#news`} dangerouslySetInnerHTML={i18n(locale, 'news')} />
+              <Link  onClick={() => setMenuOpened(false)} to={`/${locale}/#education`} dangerouslySetInnerHTML={i18n(locale, 'education-menu')} />
             </li>
             { locale != 'es' && <li className="lenguaje">
               <Link onClick={() => setMenuOpened(false)} to="/es">

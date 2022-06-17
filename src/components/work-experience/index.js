@@ -59,12 +59,15 @@ const Styles = css`
       margin-bottom: 2rem;
     }
 
-    p {
+    .wrap {
       color: #000;
       font-size: 1.5rem;
       line-height: 1.8rem;
       transition: all 1s;
       padding-bottom: 20px;
+      p {
+        padding-bottom: 20px;
+      }
     }
     h3 {
       font-size: 2.5rem;
@@ -115,14 +118,14 @@ const Styles = css`
       flex-direction: column;
       .service-box {
         width: 100%;
-        p {
+        .wrap {
           padding: 0;
         }
         &.open {
           .title-container:before {
             transform: rotate(225deg) translateY(-10px) translateX(-10px);
           }
-          p {
+          .wrap {
             padding-bottom: 20px;
             max-height:2000px;
           }
@@ -238,7 +241,7 @@ const Service = ({title, text, subtitle, date, items = {}}) => {
           <h5 dangerouslySetInnerHTML={i18n(locale, date )} />
         </div>
       </div>
-        <p className="wrap" >
+        <div className="wrap" >
           <p dangerouslySetInnerHTML={i18n(locale, text)} />
           <ol>
             <li className="flex" >
@@ -254,7 +257,7 @@ const Service = ({title, text, subtitle, date, items = {}}) => {
               <h4 dangerouslySetInnerHTML={i18n(locale, items.third )} />
             </li>
           </ol>
-        </p>
+        </div>
     </div> ) : (
     <div className="blank"></div>
     )
@@ -265,14 +268,14 @@ const WorkExperience = () => {
   locale = locale || 'us';
 
   return (
-    <div id="services" css={[Styles]}>
+    <div id="work-exp" css={[Styles]}>
       <div className="container">
         <div>
-          <div className="highlight">
+          <div className="highlight" data-aos="fade-right">
             <img className="star-icon" src={sparkle} />
             <h2 dangerouslySetInnerHTML={i18n(locale, 'work-experience')} />
           </div>
-          <div className="services-list">
+          <div className="services-list" data-aos="fade-right" >
             { services.map((service, index) => <Service key={index} {...service} />) }
           </div>
         </div>

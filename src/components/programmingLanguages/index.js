@@ -132,10 +132,10 @@ const ProgrammingLanguages = () => {
   locale = locale || 'us';
 
   return (
-    <div css={[Styles]}>
+    <div css={[Styles]} id="tools" >
       <img src={sparkle} className="icon-up" />
       <div className="container">
-        <div className="container-rounded">
+        <div className="container-rounded" data-aos="fade-up">
           <h2 dangerouslySetInnerHTML={i18n(locale, 'programming-languages')} className="highlight" />
 
           <div className="logos-container">

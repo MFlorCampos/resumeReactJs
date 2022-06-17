@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 
 import { Route, Switch } from 'react-router-dom';
 import { publicRoute } from './routes/publicRoute';
@@ -6,13 +6,16 @@ import SuperRoute from './routes';
 
 import './styles/index.scss';
 import Fallback from './components/fallback';
+import AOS from 'aos';
 
 function App() {
   const publicRoutes = [
     '/',
     '/:locale',
   ];
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Suspense fallback={<Fallback />}>
     <Switch>
