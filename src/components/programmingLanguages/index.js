@@ -1,8 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import media from '../../styles/media';
-import html from '../../../public/html-5.png';
-import cssLogo from '../../../public/css-3.png';
 import reactLogo from '../../../public/react-js.png';
 import sasssLogo from '../../../public/sass.png';
 import mySqlLogo from '../../../public/my-sql.png';
@@ -139,16 +137,6 @@ const ProgrammingLanguages = () => {
           <h2 dangerouslySetInnerHTML={i18n(locale, 'programming-languages')} className="highlight" />
 
           <div className="logos-container">
-            <div className="logo">
-              <a target="_blank" href="https://www.borderlesscapital.io/">
-                <img alt="borderless"  src={html} />
-              </a>
-            </div>
-            <div className="logo">
-              <a target="_blank" href="https://newtopia.vc/">
-                <img alt="newtopia"  src={cssLogo} />
-              </a>
-            </div>
             <div className="logo">
               <a target="_blank" href="https://sur.vc/">
                 <img alt="sur"  src={reactLogo} />

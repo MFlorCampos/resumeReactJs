@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import heroImg from '../../../public/hero1.png';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
-
+import Sparkles from '../sparkles';
 import media from '../../styles/media';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -260,8 +260,9 @@ const Hero = () => {
 
   return (
     <div className="noise" css={[Styles]} >
-      <img src={heroImg} className="hero-sparkles" />
+      {/* <img src={heroImg} className="hero-sparkles" /> */}
       <div className="container">
+        <Sparkles />
         <div className="title" >
           <div className="flex" >
             <h1 dangerouslySetInnerHTML={i18n(locale, 'hero-1-title')} data-aos="fade-up" />
