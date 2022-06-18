@@ -48,5 +48,6 @@
   "about-me": "About",
   "tools-menu": "Programming languages & tools",
   "experience-menu": "Work Experience",
-  "education-menu": "Education"
+  "education-menu": "Education",
+  "empty": ""
 }

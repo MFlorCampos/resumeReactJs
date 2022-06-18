@@ -77,7 +77,7 @@ const Header = () => {
         right: 0;
         top: 0;
         width: 100%;
-        background: linear-gradient(228deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        background: #000;
         bottom: 0;
         z-index: 10;
         display: flex;
@@ -94,6 +94,7 @@ const Header = () => {
             border-bottom: 2px solid #fff;
             a {
               background: transparent;
+              line-height: 1.5;
             }
             &:last-child {
               border: 0;
@@ -169,9 +170,6 @@ const Header = () => {
           <ul>
             <li>
               <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#about`} dangerouslySetInnerHTML={i18n(locale, 'about-me')} />
-            </li>
-            <li>
-              <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#tools`} dangerouslySetInnerHTML={i18n(locale, 'tools-menu')} />
             </li>
             <li>
               <Link onClick={() => setMenuOpened(false)} to={`/${locale}/#work-exp`} dangerouslySetInnerHTML={i18n(locale, 'experience-menu')} />

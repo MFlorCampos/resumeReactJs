@@ -91,7 +91,7 @@ const Styles = css`
   }
 
   ${media.medium} {
-    padding: 40px;
+    padding: 20px;
     .container {
       display: block;
     }
@@ -104,6 +104,9 @@ const Styles = css`
     .list {
       padding: 40px;
       text-align: center;
+      li {
+        border-top: none;
+      }
       p {
         font-size: 1.3rem;
         a {
@@ -111,11 +114,8 @@ const Styles = css`
         }
       }
     }
-    .tag {
-      font-size: 1.4rem;
-      padding: 10px 20px;
-    }
     .content-left {
+      text-align: center;
       font-size: 1.5rem;
       line-height: 2rem;
       width: 100%;
@@ -126,16 +126,6 @@ const Styles = css`
     }
     .content-right {
       width: 100%;
-    }
-    .gray-background-round {
-      display: block;
-      margin:-100px 20px;
-      padding:100px 10px;
-      border-radius: 0;
-      &:after{
-        content: none;
-        width: 100%;
-      }
     }
   }
 `;

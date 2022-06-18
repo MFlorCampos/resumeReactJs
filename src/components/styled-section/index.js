@@ -5,16 +5,6 @@ import media from '../../styles/media';
 const StyledSection = ({ children, color, styles={}, classNames=""}) => {
   const themes = [];
 
-  themes['gray'] = {
-    main: '#E8E8E8',
-    text: '#000',
-  };
-
-  themes['yellow'] = {
-    main: '#FFC515',
-    text: '#000',
-  };
-
   themes['gradient-light'] = {
     main: 'linear-gradient(to right top, #fadcff, #f0dbff, #e6daff, #dbdaff, #d1d9ff, #ccdcff, #c8dfff, #c4e1ff, #c8e7ff, #cdecff, #d4f1ff, #dcf6ff);',
     text: '#FFC515',
@@ -27,28 +17,12 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
 
   themes['gradient-up'] = {
     main: 'linear-gradient(296deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)',
-    // main: 'linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)',
     text: '#FFC515',
   };
 
   themes['gradient'] = {
     main: 'linear-gradient(to right top, #fadcff, #f0dbff, #e6daff, #dbdaff, #d1d9ff, #ccdcff, #c8dfff, #c4e1ff, #c8e7ff, #cdecff, #d4f1ff, #dcf6ff);',
     text: '#FFC515',
-  };
-
-  themes['black'] = {
-    main: '#000',
-    text: '#FFC515',
-  };
-
-  themes['white'] = {
-    main: '#fff',
-    text: '#FFC515',
-  };
-
-  themes['green'] = {
-    main: '#34C55D',
-    text: '#000',
   };
 
   const Style = css`

@@ -1,6 +1,6 @@
 {
   "hero-1-title": "María Florencia Campos",
-  "hero-1-desc": "Desarrolladora Frontend",
+  "hero-1-desc": "Frontend Dev",
   "description": "Programadora apasionada por el diseño web y desarrollo de software, me fascinan los desafíos de crear nuevos sistemas y hacer funcionales mis diseños. </br> Soy una persona proactiva que siempre está dispuesta a aprender y brindar ayuda a mis compañeros. </br> Busco la manera de hacer mi código reusable y escalable, trabajé en varios proyectos de forma autónoma diseñando y desarrollando páginas web con diferentes tecnologías como react js, vue y php.",
   "work-experience": "Experiencia laboral",
   "education": "Educación",
@@ -44,8 +44,10 @@
   "aug-2020": "Agosto/Diciembre - 2020",
   "mar-2020": "Marzo/Diciembre - 2020",
   "sept-2021": "Septiembre/Noviembre - 2021",
+  "programming-languages": "Lenguajes de programación y herramientas",
   "about-me": "Sobre mí",
   "tools-menu": "Lenguajes de programación y herramientas",
   "experience-menu": "Experiencia Laboral",
-  "education-menu": "Educación"
+  "education-menu": "Educación",
+  "empty": ""
 }

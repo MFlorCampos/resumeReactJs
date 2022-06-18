@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import heroImg from '../../../public/hero1.png';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 import Sparkles from '../sparkles';
@@ -175,22 +174,6 @@ const Styles = css`
     text-align:right;
     align-self:flex-end;
   }
-  video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-  }
-  .hero-slide {
-    position: relative;
-    .container {
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-    }
-  }
   ${media.medium} {
     display: flex;
     align-items: center;
@@ -199,27 +182,6 @@ const Styles = css`
       object-fit: fill;
       height: 60%;
     }
-    .hero-slide {
-      padding-left: 0;
-      padding-right: 0;
-      video {
-        width:100vw
-      }
-    }
-
-    padding-top: 0;
-    height: calc(100vh);
-    .hero-3 {
-      background-size: cover;
-    }
-
-    .background {
-      width: 80%;
-      height: 200px;
-      margin: auto;
-    }
-
-    br {display:none;}
     .border {
       border: 1px solid black;
       border-radius: 15px;
@@ -231,14 +193,6 @@ const Styles = css`
       width: 100%;
       overflow: hidden;
       padding: 0 40px;
-    }
-
-    .hero-image-mobile {
-      display: block;
-    }
-
-    .hero-image {
-      display:none;
     }
 
     h1 {

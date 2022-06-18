@@ -145,7 +145,7 @@ const Styles = css`
 const services = [
   {
     title: "bachelor",
-    subtitle: "udemy-title",
+    subtitle: "empty",
     date: "2018",
   },
   {
@@ -187,7 +187,7 @@ const Service = ({title, date, subtitle = {}}) => {
             <img src={spark} className="sparkle-icon" />
             <div className="text-container">
               <h3 dangerouslySetInnerHTML={i18n(locale, title)} />
-              <h4 dangerouslySetInnerHTML={i18n(locale, subtitle)} />
+              <h4 dangerouslySetInnerHTML={i18n(locale,  subtitle)} />
               <h5 dangerouslySetInnerHTML={i18n(locale, date )} />
             </div>
           </div>
