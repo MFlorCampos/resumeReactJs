@@ -19,7 +19,7 @@ const Styles = css`
     max-width: 100%;
     height: 612px;
     background-size: auto;
-    background-image: url(file:///Users/flocampos/Desktop/cv/resume-react-js/public/full-right.svg);
+    background-image: url(https://preview.cruip.com/neon/images/illustration-section-01.svg);
     background-repeat: no-repeat;
     left: 50%;
     top: 0;
@@ -130,6 +130,7 @@ const Styles = css`
       }
     }
     h2 {
+      margin-left: 20px;
       text-align: center;
     }
     .services-list {
@@ -166,9 +167,9 @@ const Styles = css`
             width: 10px;
             height: 10px;
             transform: rotate(45deg);
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid #959cb1;
             transition: all 0.4s;
-            border-right: 2px solid #000;
+            border-right: 2px solid #959cb1;
             position:absolute;
             top: 25px;
           }

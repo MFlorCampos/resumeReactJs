@@ -168,11 +168,6 @@ const Styles = css`
   ${media.medium} {
     display: flex;
     align-items: center;
-    .hero-sparkles {
-      padding: 10px;
-      object-fit: fill;
-      height: 60%;
-    }
     .border {
       border: 1px solid black;
       border-radius: 15px;

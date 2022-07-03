@@ -44,7 +44,7 @@ const Styles = css`
 
   p {
     color: #959CB1;
-    margin-top: 45px;
+    padding-top: 45px;
     font-weight: 400;
   }
 
@@ -81,7 +81,8 @@ const Styles = css`
   }
 
   ${media.medium} {
-    padding: 20px;
+    padding: 40px;
+
     .container {
       display: block;
     }
@@ -92,13 +93,13 @@ const Styles = css`
       display: block;
     }
     .list {
-      padding: 40px;
       text-align: center;
       li {
         border-top: none;
       }
       p {
-        font-size: 1.3rem;
+        padding: 10px 0;
+        font-size: 1.5rem;
         a {
           font-size: 1.5rem;
         }
@@ -109,13 +110,23 @@ const Styles = css`
       font-size: 1.5rem;
       line-height: 2rem;
       width: 100%;
-      padding: 40px;
+      h2 {
+        margin-left: 20px;
+      }
+      p {
+        padding: 40px 0;
+      }
       .star-icon {
         margin-right: 0px;
       }
     }
+
     .content-right {
       width: 100%;
+
+      .profile-img {
+        height: 200px;
+      }
     }
   }
 `;

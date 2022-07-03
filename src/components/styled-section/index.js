@@ -5,7 +5,7 @@ import media from '../../styles/media';
 const StyledSection = ({ children, color, styles={}, classNames=""}) => {
   const themes = [];
 
-  themes['gradient-light'] = {
+  themes['grey'] = {
     main: '#16171b',
     text: '#F9FAFF',
   };
@@ -27,7 +27,7 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
 
   const Style = css`
     position:relative;
-    padding: 200px 0 100px;
+    padding: 100px 0 100px;
     background: ${themes[color].main};
 
     h2 {

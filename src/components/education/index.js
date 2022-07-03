@@ -15,14 +15,15 @@ const Styles = css`
   h2 {
     font-size: 2.5rem;
     line-height: 3.3rem;
-    color: #000;
-    z-index: 3;
-    font-weight: 100;
+    margin-left: 40px;
+    color: #F9FAFF;
     text-align: left;
+    font-weight: 100;
+    z-index: 3;
     padding-bottom: 0;
   }
   .highlight {
-    border:1px solid #000;
+    background: linear-gradient(100deg, #376DF9 0, #FF5FA0 75%, #FFC55A 100%);
     border-radius: 30px;
     padding: 5px 15px;
     align-items: center;
@@ -55,21 +56,22 @@ const Styles = css`
     }
 
     p {
-      color: #000;
+      color: #959CB1;
       font-size: 1.5rem;
       line-height: 1.8rem;
       transition: all 1s;
     }
     h3 {
+      font-family: "Heebo", sans-serif;
       font-size: 2.5rem;
-      color: #000;
+      color: #959CB1;
       font-weight: 600;
       padding: 0;
       padding-bottom: 15px;
     }
     h4 {
       font-size: 1.4rem;
-      color: #000;
+      color: #959CB1;
       font-weight: 400;
       line-height: 1.8rem!important;
       padding: 0;
@@ -78,7 +80,7 @@ const Styles = css`
     }
     h5 {
       font-size: 1.2rem;
-      color: #000;
+      color: #959CB1;
       font-weight: 300;
       line-height: 1.8rem!important;
       padding: 0;
@@ -112,7 +114,7 @@ const Styles = css`
       width: 100%;
     }
     h2 {
-      text-align: center;
+      margin-left: 20px;
     }
     .services-list {
       flex-direction: column;
@@ -184,7 +186,7 @@ const Service = ({title, date, subtitle = {}}) => {
       <div className="title-container">
         <div className="text-container">
           <div className="flex">
-            <img src={spark} className="sparkle-icon" />
+            <img src="https://preview.cruip.com/neon/images/logo.svg" className="sparkle-icon" />
             <div className="text-container">
               <h3 dangerouslySetInnerHTML={i18n(locale, title)} />
               <h4 dangerouslySetInnerHTML={i18n(locale,  subtitle)} />
@@ -207,7 +209,6 @@ const Education = () => {
       <div className="container">
         <div>
           <div className="highlight" data-aos="fade-right">
-            <img className="star-icon" src={sparkle} />
             <h2 dangerouslySetInnerHTML={i18n(locale, 'education')} />
           </div>
           <div className="services-list" data-aos="fade-right">

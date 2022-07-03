@@ -16,6 +16,7 @@ import i18n from '../../i18n';
 const Styles = css`
   z-index: 3;
   position: relative;
+  padding: 50px 0 100px
 
   h2 {
     font-size: 2.5rem;
@@ -27,21 +28,15 @@ const Styles = css`
   }
 
   .container-rounded {
-    border: 1px solid #000;
     border-radius:30px;
     width: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    
     .highlight {
-      border:1px solid #000;
-      border-radius: 30px;
-      padding: 5px 15px;
-      width: auto;
-      margin-bottom: 50px;
-      margin-top: 70px;
+      padding-bottom: 50px;
     }
 
   }
@@ -49,9 +44,10 @@ const Styles = css`
   .logos-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 50px;
     width: 90%;
-    .logo{
+    .logo {
+      background: radial-gradient(circle at bottom, #376DF9 0%, #ff79af 50%, #FF8D74 100%);
+      border-radius: 100%;
       width: 10%;
       display: flex;
       justify-content: center;
@@ -83,7 +79,7 @@ const Styles = css`
     bottom: -250px;
   }
   ${media.medium} {
-    padding: 40px;
+    padding: 0 40px;
     h2 {
       width: 80%;
       font-size: 1.9rem;
@@ -93,21 +89,17 @@ const Styles = css`
       font-size:1.8rem;
     }
     .highlight {
-      margin-bottom: 70px!important;
-      margin-top: 20px!important;
+      padding: 0;
     }
-    .container-rounded {
-      background: transparent;
-      padding: 40px;
-    }
+
     .logos-container {
-      padding-bottom: 0px;
       display: flex;
       flex: wrap;
       flex-wrap: wrap;
       justify-content: center;
       .logo {
-        width: 50%;
+        width: 43%;
+        margin: 8px;
         a {
           font-size: 1.5rem;
         }
