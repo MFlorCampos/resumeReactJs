@@ -5,10 +5,27 @@ import i18n from '../../i18n';
 
 import sparkle from '../../../public/sparkle.png';
 import spark from '../../../public/spark.png';
+import image from '../../../public/jest.svg';
 import { css } from '@emotion/react';
 import media from '../../styles/media';
 
 const Styles = css`
+  background-color: #16171b;
+  padding: 100px 0 100px;
+  ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: 612px;
+    background-size: auto;
+    background-image: url(file:///Users/flocampos/Desktop/cv/resume-react-js/public/full-right.svg);
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 0;
+    background-position: center top;
+    transform: translate(-50%);
+  }
   .flex {
     display: flex;
     align-items: center;
@@ -23,16 +40,17 @@ const Styles = css`
   position: relative;
 
   h2 {
+    margin-left: 40px;
     font-size: 2.5rem;
     line-height: 3.3rem;
-    color: #000;
+    color: #F9FAFF;
     z-index: 3;
     font-weight: 100;
     text-align: left;
     padding-bottom: 0;
   }
   .highlight {
-    border:1px solid #000;
+    background: linear-gradient(100deg, #376DF9 0, #FF5FA0 75%, #FFC55A 100%);
     border-radius: 30px;
     padding: 5px 15px;
     align-items: center;
@@ -60,7 +78,7 @@ const Styles = css`
     }
 
     .wrap {
-      color: #000;
+      color: #959CB1;
       font-size: 1.5rem;
       line-height: 1.8rem;
       transition: all 1s;
@@ -70,14 +88,14 @@ const Styles = css`
       }
     }
     h3 {
+      color: #F9FAFF;
       font-size: 2.5rem;
-      color: #000;
       font-weight: 600;
       padding: 0;
     }
     h4 {
       font-size: 1.4rem;
-      color: #000;
+      color: #959CB1;
       font-weight: 400;
       line-height: 1.8rem!important;
       padding: 0;
@@ -85,7 +103,7 @@ const Styles = css`
     }
     h5 {
       font-size: 1.2rem;
-      color: #000;
+      color: #959CB1;
       font-weight: 300;
       line-height: 1.8rem!important;
       padding: 0;
@@ -245,15 +263,15 @@ const Service = ({title, text, subtitle, date, items = {}}) => {
           <p dangerouslySetInnerHTML={i18n(locale, text)} />
           <ol>
             <li className="flex" >
-              <img className="list-icon" src={spark} />
+              <img className="list-icon" src="https://preview.cruip.com/neon/images/logo.svg" />
               <h4 dangerouslySetInnerHTML={i18n(locale, items.first )} />
             </li>
             <li className="flex" >
-              <img className="list-icon" src={spark} />
+              <img className="list-icon" src="https://preview.cruip.com/neon/images/logo.svg" />
               <h4 dangerouslySetInnerHTML={i18n(locale, items.second )} />
             </li>
             <li className="flex" >
-              <img className="list-icon" src={spark} />
+              <img className="list-icon" src="https://preview.cruip.com/neon/images/logo.svg" />
               <h4 dangerouslySetInnerHTML={i18n(locale, items.third )} />
             </li>
           </ol>
@@ -272,7 +290,6 @@ const WorkExperience = () => {
       <div className="container">
         <div>
           <div className="highlight" data-aos="fade-right">
-            <img className="star-icon" src={sparkle} />
             <h2 dangerouslySetInnerHTML={i18n(locale, 'work-experience')} />
           </div>
           <div className="services-list" data-aos="fade-right" >

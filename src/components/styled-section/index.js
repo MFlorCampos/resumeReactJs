@@ -6,8 +6,8 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
   const themes = [];
 
   themes['gradient-light'] = {
-    main: 'linear-gradient(to right top, #fadcff, #f0dbff, #e6daff, #dbdaff, #d1d9ff, #ccdcff, #c8dfff, #c4e1ff, #c8e7ff, #cdecff, #d4f1ff, #dcf6ff);',
-    text: '#FFC515',
+    main: '#16171b',
+    text: '#F9FAFF',
   };
 
   themes['gradient-down'] = {
@@ -27,7 +27,7 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
 
   const Style = css`
     position:relative;
-    padding: 100px 0 100px;
+    padding: 200px 0 100px;
     background: ${themes[color].main};
 
     h2 {

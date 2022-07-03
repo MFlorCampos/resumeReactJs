@@ -8,11 +8,11 @@ import profile from '../../../public/profile.png';
 
 const Styles = css`
   .highlight {
-    border:1px solid #000;
     border-radius: 30px;
     padding: 5px 15px;
     align-items: center;
     display: flex;
+    background: linear-gradient(100deg, #376DF9 0, #FF5FA0 75%, #FFC55A 100%);
   }
   z-index: 1;
   position: relative;
@@ -22,41 +22,30 @@ const Styles = css`
   }
   .list {
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 40px;
+    padding: 20px 0;
     align-items: baseline;
-
-    li {
-      border-top: 3px solid #fff;
-    }
+    border-top: 3px solid #959CB1;
+    border-bottom: 3px solid #959CB1;
 
     p {
+      margin: 0px;
       text-transform: uppercase;
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 100;
     }
     a {
       font-size: 20px;
     }
     .link:hover {
-      color: #fff;
+      color: #F9FAFF;
     }
-  }
-  .white-container {
-    border: 1px solid #000;
-    padding:100px;
-    border-radius: 30px;
   }
 
   p {
-    margin-top: 20px;
-  }
-
-  .tag {
-    background: #000;
-    color: #fff;
-    border-radius: 60px;
-    padding: 5px 10px;
-    font-size: 1.2rem;
+    color: #959CB1;
+    margin-top: 45px;
+    font-weight: 400;
   }
 
   .content-right {
@@ -65,7 +54,7 @@ const Styles = css`
     justify-content: center;
     align-items: center;
     .profile-img {
-      height: 200px;
+      height: 300px;
       border-radius: 100%;
     }
   }
@@ -81,9 +70,10 @@ const Styles = css`
       margin-right: 20px;
     }
     h2 {
-      color: #000;
+      margin-left: 40px;
+      color: #F9FAFF;
       text-align: left;
-      font-weight: 600;
+      font-weight: 100;
       font-size: 2.8rem;
       line-height: 3.5rem;
       padding-bottom: 0;
@@ -173,7 +163,6 @@ const About = () => {
             <div className="flex">
               <div className="content-left">
                 <div className="highlight" data-aos="fade-right">
-                  <img className="star-icon" src={sparkle} />
                   <h2 dangerouslySetInnerHTML={i18n(locale, "about-me")} />
                 </div>
                 <p dangerouslySetInnerHTML={i18n(locale, "description")} data-aos="fade-right" />

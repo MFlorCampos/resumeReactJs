@@ -49,7 +49,7 @@ const Header = () => {
           font-size: 16px;
           text-transform: uppercase;
           font-weight: bold;
-          color: #000;
+          color: #F9FAFF;
           img {
             &.flag {
               height: 25px;

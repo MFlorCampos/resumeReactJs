@@ -131,7 +131,6 @@ const ProgrammingLanguages = () => {
 
   return (
     <div css={[Styles]} id="tools" >
-      <img src={sparkle} className="icon-up" />
       <div className="container">
         <div className="container-rounded" data-aos="fade-up">
           <h2 dangerouslySetInnerHTML={i18n(locale, 'programming-languages')} className="highlight" />
@@ -174,7 +173,6 @@ const ProgrammingLanguages = () => {
             </div>
           </div>
         </div>
-        <img src={sparkleTwo} className="icon-down" />
       </div>
   </div>
   );

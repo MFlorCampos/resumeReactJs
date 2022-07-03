@@ -14,15 +14,13 @@ const HomePage = () => {
     <ThemeProvider>
       <AppLayout>
         <>
-          <Hero color={"gradient-light"} classNames="noise" />
+          <Hero color={"gradient-light"} />
 
-          <StyledSection classNames="nopadding-bot-mobile border-white" color={"gradient-light"} >
+          <StyledSection classNames="nopadding-bot-mobile" color={"gradient-light"} >
             <About />
           </StyledSection>
 
-          <StyledSection color={"gradient-up"} >
-            <WorkExperience />
-          </StyledSection>
+          <WorkExperience />
 
           <StyledSection color={"gradient-down"} >
             <ProgrammingLanguages />
