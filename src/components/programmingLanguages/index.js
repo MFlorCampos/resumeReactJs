@@ -24,7 +24,7 @@ const Styles = css`
     text-align: center;
   }
   .container {
-    padding: 80px 0 80px;
+    padding: 0;
 
     .border {
       border: 1px solid #959CB1;

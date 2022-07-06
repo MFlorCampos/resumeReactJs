@@ -27,7 +27,7 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
 
   const Style = css`
     position:relative;
-    padding: 100px 0 100px;
+    padding: 30px 0 100px;
     background: ${themes[color].main};
 
     h2 {
