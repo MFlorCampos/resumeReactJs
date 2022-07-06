@@ -4,30 +4,17 @@ import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 import media from '../../styles/media';
 import { HashLink as Link } from 'react-router-hash-link';
+import BackgroundLeft from '../backgrounds/full-left';
 
 const Styles = css`
-  .hero-sparkles {
-    z-index: 10;
-    position: absolute;
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    padding: 90px;
+  .container {
+    .background {
+      position: absolute;
+      padding-top: 20em;
+      overflow: visible;
+    }
   }
-  ::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    height: 612px;
-    background-size: auto;
-    background-image: url(https://preview.cruip.com/neon/images/illustration-section-01.svg);
-    background-repeat: no-repeat;
-    left: 50%;
-    top: 0;
-    background-position: center top;
-    transform: translate(-50%);
-  }
+
   background-color: #16171b;
 
   position: relative;
@@ -168,6 +155,12 @@ const Styles = css`
   ${media.medium} {
     display: flex;
     align-items: center;
+
+    .container {
+      .background {
+        left: -45em;
+      }
+    }
     .border {
       border: 1px solid black;
       border-radius: 15px;
@@ -201,6 +194,7 @@ const Hero = () => {
   return (
     <div className="noise" css={[Styles]} >
       <div className="container">
+        <BackgroundLeft />
         <div className="title" >
           <div className="flex" >
             <h1 dangerouslySetInnerHTML={i18n(locale, 'hero-1-title')} data-aos="fade-up" />

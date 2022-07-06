@@ -2,30 +2,20 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
-
-import sparkle from '../../../public/sparkle.png';
-import spark from '../../../public/spark.png';
-import image from '../../../public/jest.svg';
 import { css } from '@emotion/react';
 import media from '../../styles/media';
+import BackgroundRight from '../backgrounds/full-right';
 
 const Styles = css`
   background-color: #16171b;
   padding: 100px 0 100px;
-  ::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    height: 612px;
-    background-size: auto;
-    background-image: url(https://preview.cruip.com/neon/images/illustration-section-01.svg);
-    background-repeat: no-repeat;
-    left: 50%;
-    top: 0;
-    background-position: center top;
-    transform: translate(-50%);
+  .container {
+    .background {
+      position: absolute;
+      overflow: visible;
+    }
   }
+
   .flex {
     display: flex;
     align-items: center;
@@ -122,6 +112,12 @@ const Styles = css`
     display:flex;
   }
   ${media.medium} {
+    .container {
+      .background {
+        right: -55em;
+        top: 0;
+      }
+    }
     padding: 40px;
     .highlight {
       width: 100%;
@@ -289,6 +285,7 @@ const WorkExperience = () => {
   return (
     <div id="work-exp" css={[Styles]}>
       <div className="container">
+        <BackgroundRight />
         <div>
           <div className="highlight" data-aos="fade-right">
             <h2 dangerouslySetInnerHTML={i18n(locale, 'work-experience')} />

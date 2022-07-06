@@ -1,9 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import i18n from '../../i18n';
-import spark from '../../../public/spark.png';
-import sparkle from '../../../public/sparkle.png';
+import i18n from '../../i18n';;
 
 import { css } from '@emotion/react';
 import media from '../../styles/media';
@@ -64,7 +61,7 @@ const Styles = css`
     h3 {
       font-family: "Heebo", sans-serif;
       font-size: 2.5rem;
-      color: #959CB1;
+      color: #F9FAFF;
       font-weight: 600;
       padding: 0;
       padding-bottom: 15px;

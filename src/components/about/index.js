@@ -33,6 +33,7 @@ const Styles = css`
       text-transform: uppercase;
       font-size: 20px;
       font-weight: 100;
+      padding: 0;
     }
     a {
       font-size: 20px;
@@ -115,6 +116,7 @@ const Styles = css`
       }
       p {
         padding: 40px 0;
+        text-align: left;
       }
       .star-icon {
         margin-right: 0px;
