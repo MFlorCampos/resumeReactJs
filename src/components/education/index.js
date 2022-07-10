@@ -98,6 +98,10 @@ const Styles = css`
       width: 100%;
     }
 
+    h2 {
+      margin-left: 20px;
+    }
+
     .item-list {
       flex-direction: column;
 

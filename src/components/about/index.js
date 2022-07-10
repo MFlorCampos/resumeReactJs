@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import media from '../../styles/media';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
-import profile from '../../../public/profile.png';
+import profile from '../../../public/profile.jpeg';
 
 const Styles = css`
   z-index: 1;
@@ -20,6 +20,7 @@ const Styles = css`
   .flex {
     display: flex;
   }
+
   .list {
     justify-content: space-between;
     margin-top: 40px;
@@ -32,12 +33,14 @@ const Styles = css`
       margin: 0px;
       text-transform: uppercase;
       font-size: 20px;
-      font-weight: 100;
+      font-weight: 200;
       padding: 0;
     }
+
     a {
       font-size: 20px;
     }
+
     .link:hover {
       color: #F9FAFF;
     }
@@ -58,13 +61,18 @@ const Styles = css`
     .profile-img {
       height: 300px;
       border-radius: 100%;
+      width: 300px;
+      object-fit: cover;
     }
   }
 
   .content-left {
     width: 50%;
-    font-size: 2rem;
-    line-height: 3rem;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
 
     h2 {
       margin-left: 40px;
@@ -122,7 +130,7 @@ const Styles = css`
       p {
         padding: 40px 0;
         text-align: left;
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         line-height: 1.3;
       }
     }
@@ -132,6 +140,7 @@ const Styles = css`
 
       .profile-img {
         height: 200px;
+        width: 200px;
       }
     }
   }

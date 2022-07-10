@@ -41,7 +41,6 @@ const Header = () => {
         display:flex;
         align-items: center;
         li {
-          margin: 0 10px;
           text-align: center;
           width: auto;
           display: inline;
@@ -77,21 +76,22 @@ const Header = () => {
         right: 0;
         top: 0;
         width: 100%;
-        background: #000;
+        background: #16171b;
         bottom: 0;
         z-index: 10;
         display: flex;
         transition: all 0.5s;
         ul {
           flex-direction: column;
-          width: 50%;
           margin: auto;
           li {
             padding:20px 50px;
             background: transparent;
             border-radius: 0;
-            color: #fff;
-            border-bottom: 2px solid #fff;
+            color: #F9FAFF;
+            border-bottom: 1px solid #F9FAFF;
+            width: 100%;
+
             a {
               background: transparent;
               line-height: 1.5;
@@ -115,9 +115,8 @@ const Header = () => {
     right: 20px;
     top: 20px;
     button {
-      background: #bda5bd;
+      background: unset;
       display: flex;
-      color:#000;
       border:none;
 
       &.open {
@@ -129,7 +128,7 @@ const Header = () => {
         .bar1, .bar2, .bar3 {
           width: 35px;
           height: 5px;
-          background-color: #000;
+          background-color: #f9faff;
           margin: 6px 0;
           transition: 0.4s;
         }
