@@ -1,9 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import i18n from '../../i18n';;
-
+import i18n from '../../i18n';
 import { css } from '@emotion/react';
 import media from '../../styles/media';
+import { ReactComponent as Logo} from '../../../public/icon.svg'
+
 
 const Styles = css`
   z-index: 3;
@@ -26,107 +27,103 @@ const Styles = css`
     align-items: center;
     display: flex;
     width: 45%;
-    .star-icon {
-      height: 50px;
-      width: 50px;
-      margin-right: 20px;
-    }
   }
-  .sparkle-icon {
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-  }
-  .services-list {
+
+  .item-list {
     display: flex;
     flex-wrap: wrap;
     padding-top: 50px;
+
+    .item-box {
+      width: 30%;
+      margin-top: 20px;
+      margin-right: 20px;
+      border-top: 3px solid #F9FAFF;
+
+      p {
+        color: #959CB1;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        transition: all 1s;
+      }
+
+      h3 {
+        font-family: "Heebo", sans-serif;
+        font-size: 2.5rem;
+        color: #F9FAFF;
+        font-weight: 600;
+        padding: 0;
+        padding-bottom: 15px;
+      }
+
+      h4 {
+        font-size: 1.4rem;
+        color: #959CB1;
+        font-weight: 400;
+        line-height: 1.8rem!important;
+        padding: 0;
+        font-style: italic;
+        padding-bottom: 15px;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+        color: #959CB1;
+        font-weight: 300;
+        line-height: 1.8rem!important;
+        padding: 0;
+      }
   }
-  .service-box {
-    width: 30%;
-    margin-top: 20px;
-    margin-right: 20px;
-    border-top: 3px solid #fff;
-
-    &:last-of-type {
-      margin-bottom: 2rem;
-    }
-
-    p {
-      color: #959CB1;
-      font-size: 1.5rem;
-      line-height: 1.8rem;
-      transition: all 1s;
-    }
-    h3 {
-      font-family: "Heebo", sans-serif;
-      font-size: 2.5rem;
-      color: #F9FAFF;
-      font-weight: 600;
-      padding: 0;
-      padding-bottom: 15px;
-    }
-    h4 {
-      font-size: 1.4rem;
-      color: #959CB1;
-      font-weight: 400;
-      line-height: 1.8rem!important;
-      padding: 0;
-      font-style: italic;
-      padding-bottom: 15px;
-    }
-    h5 {
-      font-size: 1.2rem;
-      color: #959CB1;
-      font-weight: 300;
-      line-height: 1.8rem!important;
-      padding: 0;
-    }
 
     .title-container {
-      .text-container {
-        .flex {
-          display: flex;
-
-          .star-icon {
-            height: 50px;
-            width: 50px;
-            margin-right: 20px;
-          }
-        }
-        display: block;
-      }
       display: flex;
       padding: 20px 0;
+
+      .icon {
+        width: 10%;
+      }
+
+      .text-container {
+        width: 90%;
+        margin-left: 10px;
+        display: block;
+      }
     }
   }
-  .blank {
-    width: 30%;
-    margin-right: 20px;
-    display:flex;
-  }
+
   ${media.medium} {
     padding: 40px;
+
     .highlight {
       width: 100%;
     }
-    h2 {
-      margin-left: 20px;
-    }
-    .services-list {
+
+    .item-list {
       flex-direction: column;
-      .service-box {
+
+      .item-box {
         width: 100%;
+        margin: 0;
 
         .title-container {
           position: relative;
-          flex-direction: row-reverse;
           justify-content: flex-end;
-          h3 {
-            font-size: 2rem;
+
+          .icon {
+            width: 15%;
           }
-          .title-icon {
-            margin-right: 10px;
+
+          .text-container {
+            width: 85%;
+
+            h4 {
+              padding-bottom: 0.5em;
+            }
+          }
+
+          h3 {
+            font-size: 1.9rem;
+            padding-bottom: 0.5em;
           }
         }
         p {
@@ -134,9 +131,6 @@ const Styles = css`
           overflow: hidden;
         }
       }
-    }
-    .blank {
-      display:none;
     }
   }
 `;
@@ -179,17 +173,13 @@ const Service = ({title, date, subtitle = {}}) => {
   locale = locale || 'us';
 
   return title ? (
-    <div className="service-box" >
+    <div className="item-box" >
       <div className="title-container">
+        <Logo className="icon" />
         <div className="text-container">
-          <div className="flex">
-            <img src="https://preview.cruip.com/neon/images/logo.svg" className="sparkle-icon" />
-            <div className="text-container">
-              <h3 dangerouslySetInnerHTML={i18n(locale, title)} />
-              <h4 dangerouslySetInnerHTML={i18n(locale,  subtitle)} />
-              <h5 dangerouslySetInnerHTML={i18n(locale, date )} />
-            </div>
-          </div>
+          <h3 dangerouslySetInnerHTML={i18n(locale, title)} />
+          <h4 dangerouslySetInnerHTML={i18n(locale,  subtitle)} />
+          <h5 dangerouslySetInnerHTML={i18n(locale, date )} />
         </div>
       </div>
     </div> ) : (
@@ -208,7 +198,7 @@ const Education = () => {
           <div className="highlight" data-aos="fade-right">
             <h2 dangerouslySetInnerHTML={i18n(locale, 'education')} />
           </div>
-          <div className="services-list" data-aos="fade-right">
+          <div className="item-list" data-aos="fade-right">
             { services.map((service, index) => <Service key={index} {...service} />) }
           </div>
         </div>

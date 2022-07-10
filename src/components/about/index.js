@@ -3,10 +3,12 @@ import { css } from '@emotion/react';
 import media from '../../styles/media';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
-import sparkle from '../../../public/sparkle.png';
 import profile from '../../../public/profile.png';
 
 const Styles = css`
+  z-index: 1;
+  position: relative;
+
   .highlight {
     border-radius: 30px;
     padding: 5px 15px;
@@ -14,8 +16,6 @@ const Styles = css`
     display: flex;
     background: linear-gradient(100deg, #376DF9 0, #FF5FA0 75%, #FFC55A 100%);
   }
-  z-index: 1;
-  position: relative;
 
   .flex {
     display: flex;
@@ -54,6 +54,7 @@ const Styles = css`
     display: flex;
     justify-content: center;
     align-items: center;
+
     .profile-img {
       height: 300px;
       border-radius: 100%;
@@ -64,12 +65,7 @@ const Styles = css`
     width: 50%;
     font-size: 2rem;
     line-height: 3rem;
-    .blue-line { color: blue; }
-    .star-icon {
-      height: 50px;
-      width: 50px;
-      margin-right: 20px;
-    }
+
     h2 {
       margin-left: 40px;
       color: #F9FAFF;
@@ -87,39 +83,47 @@ const Styles = css`
     .container {
       display: block;
     }
+
     .white-container {
       padding: 0px;
     }
+
     .flex {
       display: block;
     }
+
     .list {
       text-align: center;
+
       li {
         border-top: none;
       }
+
       p {
         padding: 10px 0;
         font-size: 1.5rem;
+
         a {
           font-size: 1.5rem;
         }
       }
     }
+
     .content-left {
       text-align: center;
       font-size: 1.5rem;
       line-height: 2rem;
       width: 100%;
+
       h2 {
         margin-left: 20px;
       }
+
       p {
         padding: 40px 0;
         text-align: left;
-      }
-      .star-icon {
-        margin-right: 0px;
+        font-size: 1.9rem;
+        line-height: 1.3;
       }
     }
 

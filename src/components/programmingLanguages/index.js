@@ -31,18 +31,21 @@ const Styles = css`
       border-radius: 15px;
       height: 100%;
       width: 100%;
+
       .frame {
         width: 100%;
         border-bottom: 1px solid #959CB1;
         align-items: center;
         display: flex;
         padding: 10px;
+
         .circle {
           width: 20px;
           height: 20px;
           border: 1px solid #959CB1;
           border-radius: 30px;
         }
+
         .circle2 {
           width: 20px;
           height: 20px;
@@ -64,7 +67,6 @@ const Styles = css`
         padding: 50px 0 0;
         font-weight: 100;
       }
-
     }
   }
 
@@ -75,56 +77,39 @@ const Styles = css`
     padding: 50px 0;
 
     .logo {
-      background: radial-gradient(circle at bottom, #376DF9 0%, #ff79af 50%, #FF8D74 100%);
-      border-radius: 100%;
-      width: 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 0;
       margin: 0 1em;
+      display: flex;
+      border-radius: 100%;
+      background: radial-gradient(circle at bottom, #376DF9 0%, #ff79af 50%, #FF8D74 100%);
 
       img {
-        width:60%;
-      }
-      a {
-        font-size: 1.3rem;
-        display: flex;
-        img {
-          width: 60px;
-          height: 60px;
-          object-fit: contain;
-        }
+        width: 8em;
+        height: 8em;
+        object-fit: contain;
+        padding: 1.2em;
+
       }
     }
   }
-  .icon-up {
-    position:absolute;
-    left: 100px;
-    width: 250px;
-    top: -300px;
-  }
-  .icon-down {
-    position:absolute;
-    right: 0px;
-    width: 250px;
-    bottom: -250px;
-  }
+
   ${media.medium} {
+    padding: 0 40px;
+
     .container {
       background-color: unset;
       padding: 0;
     }
 
-    padding: 0 40px;
     h2 {
       padding: 50px 20px 0 20px!important;
       font-size: 1.9rem;
     }
+
     h3 {
       font-weight:400;
       font-size:1.8rem;
     }
+
     .highlight {
       padding: 0;
     }
@@ -134,24 +119,10 @@ const Styles = css`
       flex: wrap;
       flex-wrap: wrap;
       justify-content: center;
+
       .logo {
-        width: 60px;
-        margin: 8px;
-        height: 60px;
-        padding: 45px;
-        a {
-          font-size: 1.5rem;
-        }
+        margin: 0.5em;
       }
-    }
-    .icon-up {
-      left: 0;
-      width: 130px;
-      top: -150px;
-    }
-    .icon-down {
-      width: 100px;
-      bottom: -135px;
     }
   }
 `;
@@ -172,39 +143,25 @@ const ProgrammingLanguages = () => {
             <h2 dangerouslySetInnerHTML={i18n(locale, 'programming-languages')} className="highlight" />
             <div className="logos-container">
               <div className="logo">
-                <a target="_blank" href="https://sur.vc/">
-                  <img alt="sur"  src={reactLogo} />
-                </a>
+                <img alt="react"  src={reactLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://spicevc.com/">
-                  <img alt="spice" src={sasssLogo} />
-                </a>
+                <img alt="sass" src={sasssLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://www.11-11dg.partners/">
-                  <img alt="dg" src={mySqlLogo} />
-                </a>
+                <img alt="mysql" src={mySqlLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://xeibocapital.com/">
-                  <img alt="xeibo" src={laravelLogo} />
-                </a>
+                <img alt="laravel" src={laravelLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://xeibocapital.com/">
-                  <img alt="xeibo" src={vueLogo} />
-                </a>
+                <img alt="vue" src={vueLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://xeibocapital.com/">
-                  <img alt="xeibo" src={jestLogo} />
-                </a>
+                <img alt="jest" src={jestLogo} />
               </div>
               <div className="logo">
-                <a target="_blank" href="https://xeibocapital.com/">
-                  <img alt="xeibo" src={angularLogo} />
-                </a>
+                <img alt="angular" src={angularLogo} />
               </div>
             </div>
           </div>

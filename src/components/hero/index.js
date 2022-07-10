@@ -4,25 +4,25 @@ import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 import media from '../../styles/media';
 import { HashLink as Link } from 'react-router-hash-link';
-import BackgroundLeft from '../backgrounds/full-left';
+import BackgroundLeft from '../svg/full-left';
 
 const Styles = css`
+  background-color: #16171b;
+  position: relative;
+  z-index: 4;
+
+  section {
+    height: 100vh;
+  }
   .container {
+    height: 100vh;
+
     .background {
       position: absolute;
       padding-top: 20em;
       overflow: visible;
     }
-  }
 
-  background-color: #16171b;
-
-  position: relative;
-  z-index: 4;
-  section {
-    height: 100vh;
-  }
-  .container {
     .title {
       .flex {
         display: flex;
@@ -57,7 +57,7 @@ const Styles = css`
         }
       }
     }
-    height: 100vh;
+
     .scrolldown a svg {
        position: absolute;
        bottom: 30px;
@@ -110,48 +110,6 @@ const Styles = css`
     width:100%;
   }
 
-  .hero-image {
-    max-width: 100%;
-  }
-
-  .hero-image-mobile {
-    display:none;
-  }
-  .slick-arrow {
-    display: none!important;
-  }
-  .hero-3 {
-    position:relative;
-    .container {
-      position: absolute;
-      top: 0;
-      left:0;
-      right:0;
-      width:100vw;
-    }
-
-    h1 {
-      margin-top:50px;
-      margin-bottom:20px;
-    }
-  }
-  .hero-2 {
-    position:relative;
-  }
-
-  .float-left {
-    align-self:flex-start;
-    text-align:left;
-    max-width: 600px;
-    margin-bottom: 200px;
-    margin-top: 0;
-  }
-
-  .float-right {
-    float:right;
-    text-align:right;
-    align-self:flex-end;
-  }
   ${media.medium} {
     display: flex;
     align-items: center;
@@ -161,6 +119,7 @@ const Styles = css`
         left: -45em;
       }
     }
+
     .border {
       border: 1px solid black;
       border-radius: 15px;
@@ -216,7 +175,6 @@ const Hero = () => {
         </p>
       </div>
     </div>
-
   );
 }
 
