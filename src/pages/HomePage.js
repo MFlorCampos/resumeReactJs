@@ -26,7 +26,7 @@ const HomePage = () => {
             <ProgrammingLanguages />
           </StyledSection>
 
-          <StyledSection color={"grey"} >
+          <StyledSection classNames="nopadding-bot-mobile" color={"grey"} >
             <Education />
           </StyledSection>
 

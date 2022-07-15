@@ -30,7 +30,7 @@ const Header = () => {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 2;
 
     .menu-container a {
       color: #ffc515;
@@ -62,10 +62,9 @@ const Header = () => {
       position:fixed;
       background: transparent;
       position: absolute;
-
       padding-left: 20px;
       height: 70px;
-      z-index: 6;
+      z-index: 2;
 
       .menu {
         overflow: hidden;
@@ -78,7 +77,6 @@ const Header = () => {
         width: 100%;
         background: #16171b;
         bottom: 0;
-        z-index: 10;
         display: flex;
         transition: all 0.5s;
         ul {
@@ -109,11 +107,12 @@ const Header = () => {
 
   display: none;
   ${media.medium} {
-    z-index: 12;
     display: block;
     position: fixed;
     right: 20px;
     top: 20px;
+    z-index: 1;
+
     button {
       background: unset;
       display: flex;

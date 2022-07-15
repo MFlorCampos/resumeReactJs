@@ -26,8 +26,8 @@ const Styles = css`
     margin-top: 40px;
     padding: 20px 0;
     align-items: baseline;
-    border-top: 3px solid #959CB1;
-    border-bottom: 3px solid #959CB1;
+    border-top: 1px solid #959CB1;
+    border-bottom: 1px solid #959CB1;
 
     p {
       margin: 0px;
@@ -48,7 +48,6 @@ const Styles = css`
 
   p {
     color: #959CB1;
-    padding-top: 45px;
     font-weight: 400;
   }
 
@@ -68,6 +67,11 @@ const Styles = css`
 
   .content-left {
     width: 50%;
+    .align-center {
+      height: 90%;
+      display: flex;
+      align-items: center;
+    }
 
     p {
       font-size: 1.5rem;
@@ -191,7 +195,9 @@ const About = () => {
                 <div className="highlight" data-aos="fade-right">
                   <h2 dangerouslySetInnerHTML={i18n(locale, "about-me")} />
                 </div>
-                <p dangerouslySetInnerHTML={i18n(locale, "description")} data-aos="fade-right" />
+                <div className="align-center">
+                  <p dangerouslySetInnerHTML={i18n(locale, "description")} data-aos="fade-right" />
+                </div>
               </div>
               <div className="content-right">
                 <img alt="profile-img"  className="profile-img" src={profile} />

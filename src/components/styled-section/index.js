@@ -57,7 +57,7 @@ const StyledSection = ({ children, color, styles={}, classNames=""}) => {
         display: none;
       }
       &.nopadding-bot-mobile {
-        padding-bottom: 0;
+        padding: 0;
       }
       &.nopadding-bot-top-mobile {
         padding-top:0;

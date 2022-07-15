@@ -7,7 +7,6 @@ import { ReactComponent as Logo} from '../../../public/icon.svg'
 
 
 const Styles = css`
-  z-index: 3;
   position: relative;
 
   h2 {
@@ -17,7 +16,6 @@ const Styles = css`
     color: #F9FAFF;
     text-align: left;
     font-weight: 100;
-    z-index: 3;
     padding-bottom: 0;
   }
   .highlight {
@@ -38,7 +36,7 @@ const Styles = css`
       width: 30%;
       margin-top: 20px;
       margin-right: 20px;
-      border-top: 3px solid #F9FAFF;
+      border-top: 1px solid #F9FAFF;
 
       p {
         color: #959CB1;
@@ -103,7 +101,7 @@ const Styles = css`
     }
 
     .item-list {
-      flex-direction: column;
+      flex-direction: column-reverse;
 
       .item-box {
         width: 100%;
@@ -115,6 +113,7 @@ const Styles = css`
 
           .icon {
             width: 15%;
+            height: 3em;
           }
 
           .text-container {

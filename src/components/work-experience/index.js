@@ -10,7 +10,6 @@ import BackgroundRight from '../svg/full-right';
 const Styles = css`
   background-color: #16171b;
   padding: 100px 0 100px;
-  z-index: 3;
   position: relative;
 
   .container {
@@ -40,7 +39,6 @@ const Styles = css`
     font-size: 2.5rem;
     line-height: 3.3rem;
     color: #F9FAFF;
-    z-index: 3;
     font-weight: 100;
     text-align: left;
     padding-bottom: 0;
@@ -63,7 +61,7 @@ const Styles = css`
 
   .item-box {
     width: 30%;
-    border-top: 3px solid #FFF;
+    border-top: 1px solid #FFF;
     margin-top: 20px;
     margin-right: 20px;
 
@@ -180,6 +178,7 @@ const Styles = css`
           justify-content: flex-end;
 
           .text-container {
+            width: 95%;
             h3, h4 {
               padding-bottom: 0.5em;
             }

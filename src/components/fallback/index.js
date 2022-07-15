@@ -6,7 +6,6 @@ const styles = css`
   height: 100vh;
   position: fixed;
   background: #000;
-  z-index: 10;
   display:flex;
   flex-direction: column;
   justify-content: center;

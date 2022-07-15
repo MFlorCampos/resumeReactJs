@@ -9,7 +9,7 @@ import BackgroundLeft from '../svg/full-left';
 const Styles = css`
   background-color: #16171b;
   position: relative;
-  z-index: 4;
+  z-index: 1;
 
   section {
     height: 100vh;
@@ -70,8 +70,6 @@ const Styles = css`
        font-size: 42px;
        line-height: 42px;
        border-radius: 100%;
-       z-index: 99;
-
        -webkit-transition: all .3s ease-in-out;
        -moz-transition: all .3s ease-in-out;
        -o-transition: all .3s ease-in-out;
@@ -85,7 +83,6 @@ const Styles = css`
     font-size: 6rem;
     text-align: center;
     color: #F9FAFF;
-    z-index: 3;
     letter-spacing: -2px;
     font-weight: 600;
   }
@@ -94,7 +91,6 @@ const Styles = css`
     font-size: 3rem;
     text-align: center;
     color: #959CB1;
-    z-index: 3;
     padding: 5px 30px;
     display: flex;
     align-items: end;

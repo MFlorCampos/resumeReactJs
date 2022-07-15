@@ -12,7 +12,6 @@ import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 
 const Styles = css`
-  z-index: 3;
   position: relative;
   padding: 50px 0 100px
 
@@ -20,7 +19,6 @@ const Styles = css`
     font-size: 2.5rem;
     line-height: 3.3rem;
     color: #000;
-    z-index: 3;
     text-align: center;
   }
   .container {
