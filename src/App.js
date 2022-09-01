@@ -18,18 +18,17 @@ function App() {
   }, []);
   return (
     <Suspense fallback={<Fallback />}>
-    <Switch>
-      <Route exact path={publicRoutes}>
-        {
-          publicRoute.map(({ path, component, exact}) => {
-            return (
-              <SuperRoute key={path} path={path} component={component} exact={exact} />
-            )
-          })
-        }
-
-      </Route>
-    </Switch>
+      <Switch>
+        <Route exact path={publicRoutes}>
+          {
+            publicRoute.map(({ path, component, exact}) => {
+              return (
+                <SuperRoute key={path} path={path} component={component} exact={exact} />
+              )
+            })
+          }
+        </Route>
+      </Switch>
     </Suspense>
   );
 }

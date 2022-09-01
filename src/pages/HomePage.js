@@ -1,5 +1,4 @@
 import React from 'react';
-
 import AppLayout from '../layouts/AppLayout';
 import ThemeProvider from '../contexts/ThemeContext';
 import Hero from '../components/hero';
