@@ -246,13 +246,13 @@ const services = [
   },
   {
     title: "freelance-dev",
-    subtitle: "minister",
+    subtitle: "freelance",
     date: "2020",
     text: "freelance-desc",
     items: {
       first: "full-stack",
-      second: "middleend",
-      third: "react-js",
+      second: "jquery",
+      third: "php",
     },
   },
   {
@@ -261,9 +261,9 @@ const services = [
     date: "2019",
     text: "igee-desc",
     items: {
-      first: "php",
-      second: "jquery",
-      third: "controllers",
+      first: "sass",
+      second: "admin",
+      third: "wp",
     },
   },
 ];

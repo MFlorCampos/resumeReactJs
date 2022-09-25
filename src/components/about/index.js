@@ -4,6 +4,8 @@ import media from '../../styles/media';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
 import profile from '../../../public/profile.jpeg';
+import linkedin from '../../../public/linkedin.png';
+import gitlab from '../../../public/gitlab.png';
 
 const Styles = css`
   z-index: 1;
@@ -28,8 +30,19 @@ const Styles = css`
     align-items: baseline;
     border-top: 1px solid #959CB1;
     border-bottom: 1px solid #959CB1;
+    align-items: center;
+
+    .contact-icon {
+      height: 30px;
+      padding-right: 10px;
+    }
+    .contact-icon:hover {
+      color: #F9FAFF;
+    }
 
     p {
+      display: flex;
+      align-items: center;
       margin: 0px;
       text-transform: uppercase;
       font-size: 20px;
@@ -158,24 +171,25 @@ const contacts = [
     text: "Argentina",
   },
   {
-
     text: "m.ﬂorcampos99@gmail.com",
   },
   {
+    icon: linkedin,
     text: "/MFlorenciaCampos",
     link: "https://www.linkedin.com/in/mflorenciacampos/"
   },
   {
+    icon: gitlab,
     text: "/FlorCampos",
     link: "https://gitlab.com/FlorCampos",
   },
 ];
 
-const ContactText = ({text, link = {}}) => {
+const ContactText = ({text, link = {}, icon}) => {
   return (
     <li>
         { Object.keys(link).length === 0 ? <p>{text}</p>
-        : <p><a target="blank" href={link} className="link" >{text}</a></p>}
+        : <p><img className="contact-icon" alt="icon" src={icon} /><a target="blank" href={link} className="link" >{text}</a></p>}
     </li>
   )
 };

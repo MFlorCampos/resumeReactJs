@@ -3,10 +3,18 @@ import { css } from '@emotion/react';
 import media from '../../styles/media';
 import reactLogo from '../../../public/react-js.png';
 import sasssLogo from '../../../public/sass.png';
-import mySqlLogo from '../../../public/my-sql.png';
-import laravelLogo from '../../../public/laravel.png';
-import vueLogo from '../../../public/vue-js.png';
-import angularLogo from '../../../public/angular.png';
+
+// import mySqlLogo from '../../../public/my-sql.png';
+// import laravelLogo from '../../../public/laravel.png';
+// import vueLogo from '../../../public/vue-js.png';
+
+import node from '../../../public/node.png';
+import js from '../../../public/js.png';
+import ts from '../../../public/ts.png';
+import css3 from '../../../public/css.png';
+import html from '../../../public/html.png';
+import es6 from '../../../public/es6.png';
+// import angularLogo from '../../../public/angular.png';
 import jestLogo from '../../../public/jest.png';
 import { useParams } from 'react-router-dom';
 import i18n from '../../i18n';
@@ -141,25 +149,31 @@ const ProgrammingLanguages = () => {
             <h2 dangerouslySetInnerHTML={i18n(locale, 'programming-languages')} className="highlight" />
             <div className="logos-container">
               <div className="logo">
-                <img alt="react"  src={reactLogo} />
+                <img alt="html" src={html} />
+              </div>
+              <div className="logo">
+                <img alt="css3" src={css3} />
               </div>
               <div className="logo">
                 <img alt="sass" src={sasssLogo} />
               </div>
               <div className="logo">
-                <img alt="mysql" src={mySqlLogo} />
+                <img alt="mysql" src={js} />
               </div>
               <div className="logo">
-                <img alt="laravel" src={laravelLogo} />
+                <img alt="es6" src={es6} />
               </div>
               <div className="logo">
-                <img alt="vue" src={vueLogo} />
+                <img alt="ts" src={ts} />
+              </div>
+              <div className="logo">
+                <img alt="react"  src={reactLogo} />
+              </div>
+              <div className="logo">
+                <img alt="mysql" src={node} />
               </div>
               <div className="logo">
                 <img alt="jest" src={jestLogo} />
-              </div>
-              <div className="logo">
-                <img alt="angular" src={angularLogo} />
               </div>
             </div>
           </div>
