@@ -57,6 +57,7 @@ const Styles = css`
     display: flex;
     flex-wrap: wrap;
     padding-top: 50px;
+    justify-content: space-between;
   }
 
   .item-box {
@@ -78,6 +79,25 @@ const Styles = css`
 
       p {
         padding-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .subtitles {
+        padding-bottom: 20px;
+        font-style: italic;
+        font-size: 1.4rem;
+      }
+
+      .bottom-space:last-child {
+        padding-bottom: 20px;
+      }
+
+      ol {
+        list-style: disc;
+
+        li {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -96,7 +116,7 @@ const Styles = css`
         }
 
         h4 {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           color: #959CB1;
           font-weight: 400;
           padding: 0;
@@ -221,54 +241,62 @@ const services = [
   {
     title: "software-dev",
     subtitle: "mercado-libre",
+    responsibilities: "responsibilities",
+    tools: "tools",
     date: "2022",
     text: "mercado-libre-desc",
     items: {
-      first: "api-rest",
-      second: "middleend",
-      third: "react-js",
+      firstMl : "firstMl",
+      secondMl: "secondMl",
+      thirdMl: "thirdMl",
+      fourthMl: "fourthMl",
+      fifthMl: "fifthMl",
+      sixthMl: "sixthMl",
+    },
+    skills: {
+      firstMlT: "first-ml-t",
+      secondMlT: "second-ml-t",
+      thirdMlT: "third-ml-t",
     },
   },
   {
     title: "software-dev-analyst",
     subtitle: "minister",
+    responsibilities: "responsibilities",
+    tools: "tools",
     date: "2021",
     text: "minister-desc",
     items: {
-      first: "services-dev",
-      second: "middlewares",
-      third: "controllers",
+      firstMoe: "firstMoe",
+      secondMoe: "secondMoe",
+      thirdMoe: "thirdMoe",
     },
-  },
-  {
-  },
-  {
+    skills: {
+      firstMoeT: "first-moe-t",
+      secondMoeT: "second-moe-t",
+      thirdMoeT: "third-moe-t",
+    },
   },
   {
     title: "freelance-dev",
     subtitle: "freelance",
+    responsibilities: "responsibilities",
+    tools: "tools",
     date: "2020",
     text: "freelance-desc",
     items: {
-      first: "full-stack",
-      second: "jquery",
-      third: "php",
+      firstF: "firstF",
+      secondF: "secondF",
+      thirdF: "thirdF",
     },
-  },
-  {
-    title: "igee-web-design",
-    subtitle: "company",
-    date: "2019",
-    text: "igee-desc",
-    items: {
-      first: "sass",
-      second: "admin",
-      third: "wp",
+    skills: {
+      firstFT: "first-f-t",
+      secondFT: "second-f-t",
     },
   },
 ];
 
-const Service = ({title, text, subtitle, date, items = {}}) => {
+const Service = ({title, text, subtitle, date, items, responsibilities, tools, skills = {}}) => {
   let { locale } = useParams();
   locale = locale || 'us';
 
@@ -281,7 +309,6 @@ const Service = ({title, text, subtitle, date, items = {}}) => {
     className =  `tem-box ${isOpen ? 'open' : ''}`;
   }, [isOpen]);
 
-
   return title ? (
     <div onClick={handleOpen} className={className}>
       <div className="title-container">
@@ -293,19 +320,21 @@ const Service = ({title, text, subtitle, date, items = {}}) => {
       </div>
         <div className="wrap" >
           <p dangerouslySetInnerHTML={i18n(locale, text)} />
+          <p className="subtitles" dangerouslySetInnerHTML={i18n(locale, responsibilities)} />
           <ol>
-            <li className="flex" >
-              <Logo className="list-icon" />
-              <h4 dangerouslySetInnerHTML={i18n(locale, items.first )} />
-            </li>
-            <li className="flex" >
-              <Logo className="list-icon" />
-              <h4 dangerouslySetInnerHTML={i18n(locale, items.second )} />
-            </li>
-            <li className="flex" >
-              <Logo className="list-icon" />
-              <h4 dangerouslySetInnerHTML={i18n(locale, items.third )} />
-            </li>
+            {
+              Object.keys(items).map((item => (
+                <li className="bottom-space" dangerouslySetInnerHTML={i18n(locale, item )} />
+              )))
+            }
+          </ol>
+          <p className="subtitles" dangerouslySetInnerHTML={i18n(locale, tools)} />
+          <ol>
+            {
+              Object.keys(skills).map((skill => (
+                <li dangerouslySetInnerHTML={i18n(locale, skill )} />
+              )))
+            }
           </ol>
         </div>
     </div> ) : (
